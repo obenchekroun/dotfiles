@@ -1,0 +1,346 @@
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#ad7fa8" "#8cc4ff" "#eeeeec"])
+ '(custom-safe-themes (quote ("6f3060ac8300275c990116794e1ba897b6a8af97c51a0cb226a98759752cddcf" "dc46381844ec8fcf9607a319aa6b442244d8c7a734a2625dac6a1f63e34bc4a6" "86e74c4c42677b593d1fab0a548606e7ef740433529b40232774fbb6bc22c048" "8d3fd54c8ccc81768ade3897e06646225d4ff7fe2c7ef1c8ee669ff85a3285b1" default)))
+ '(ns-alternate-modifier (quote none))
+ '(ns-function-modifier (quote meta)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+;; bouton central de la souris devient contrôle click
+;(global-set-key [M-down-mouse-3] 'flyspell-correct-word-at-point)
+
+
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+
+(set-terminal-coding-system 'utf-8)
+    (set-keyboard-coding-system 'utf-8)
+    (prefer-coding-system 'utf-8)
+(set-language-environment 'utf-8)
+(setq-default cursor-type 'bar) 
+
+;;;; Pour le comportement du copier/coller
+(cua-mode t)
+(setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
+(transient-mark-mode 1) ;; No region when it is not highlighted
+(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
+
+(add-to-list 'load-path "~/.emacs.d/")
+
+;;(setq ispell-program-name "/usr/local/Cellar/ispell/3.3.02/bin/ispell")
+;; flyspell
+(setq-default ispell-program-name "/usr/local/bin/aspell")
+
+
+(add-to-list 'default-frame-alist
+             '(font . "-apple-Helvetica-medium-normal-normal-*-*-*-*-*-p-0-iso10646-1"))
+;(set-default-font "-apple-Helvetica-medium-normal-normal-*-*-*-*-*-p-0-iso10646-1")
+
+
+;;(setq ispell-dictionary "French")
+;;################################################################################
+;;                                            THUMBS-MODE
+;;################################################################################
+ (autoload 'thumbs "thumbs" "Preview images in a directory." t)
+
+;;################################################################################
+;;                                  ACTIVER LA COLORATION SYNTAXIQUE
+;;################################################################################
+(global-font-lock-mode t)
+(setq font-lock-maximum-decoration t)
+(setq font-lock-maximum-size nil)
+
+
+
+;;################################################################################
+;;                              SURLIGNAGE D'UNE RÉGION SÉLECTIONNÉE
+;;################################################################################
+(transient-mark-mode t)
+
+
+;;################################################################################
+;;                   POUR NE PAS AVOIR À TAPER EN ENTIER LA RÉPONSE YES/NO
+;;################################################################################
+
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;;################################################################################
+;;                  NUMÉROTATION DES LIGNES EST DES COLONNES
+;;################################################################################
+;; Show line-number in the mode line
+(line-number-mode 1)
+
+;; Show column-number in the mode line
+(column-number-mode 1)
+
+;;################################################################################
+;;                        POUR AVOIR L'HEURE DANS LA BARRE D'ETAT
+;;################################################################################
+(display-time)
+
+(setq display-time-24hr-format t)  ;; Format 24 heures
+
+;;################################################################################
+;;                        POUR LA TRONCATURE EN FIN DE LIGNE PAR MOT
+;;################################################################################
+
+(global-visual-line-mode 1)
+
+;;################################################################################
+;;                             SUPPORT DE LA SOURIS
+;;################################################################################
+
+
+;;(mouse-wheel-mode t)
+
+
+
+;;################################################################################
+;;              AUTO FILL MODE(retour a la ligne automatiquement)
+;;################################################################################
+
+
+;(setq auto-fill-mode 1)
+
+;(add-to-list 'auto-mode-alist (cons "\\.php$" 'php-mode))
+
+;(defun toggle-setnu-mode ()
+   ;   (interactive)
+  ;    (if setnu-mode
+   ;     (setnu-mode -1)
+    ;    (setnu-mode 1)))
+
+
+
+;;################################################################################
+;;                    AFFICHAGE DES IMAGES ET FICHIERS COMPRESSÉS
+;;################################################################################
+
+
+(setq auto-image-file-mode t)
+    (setq auto-compression-mode t)
+
+(cond ((not (eq window-system 'x))
+       (set-keyboard-coding-system 'latin-1)))
+
+;;################################################################################
+    ; METTRE TOUS LES FICHIERS DE SAUVEGARDE DANS UN SEUL RÉPERTOIRE
+;;################################################################################
+
+
+
+
+(setq backup-directory-alist
+    '(("." . "~/.emacs-backup-files/")))
+
+(cond ((not (eq window-system 'x))
+       (set-keyboard-coding-system 'latin-1)))
+
+
+
+;;################################################################################
+;                          TEXT AND AUTO FILL MODE
+;;################################################################################
+
+
+;(setq default-major-mode 'text-mode)
+;(add-hook 'text-mode-hook 'text-mode-hook-identify)
+;(add-hook 'text-mode-hook 'turn-on-auto-fill)
+
+;;################################################################################
+;;                     CHEMIN COMPLET DANS LA BARRE DE TITRE ?
+;;################################################################################
+
+;(setq frame-title-format "%S: %f")
+
+
+
+;;################################################################################
+ ;; POUR ENREGISTRER AUTOMATIQUEMENT LA POSITION DU CURSEUR QUAND ON QUITTE UN
+;; FICHIER, ET Y RETOURNER AUTOMATIQUEMENT À LA RÉOUVERTURE
+;;################################################################################
+
+(require 'saveplace)
+(setq-default save-place t)
+
+
+;;################################################################################
+;; PARENTHESE MATCHING, PERMET DE VERIFIER AU FUR ET À MESURE DE LA FRAPPE QUE
+;; L'ON FERME BIEN CE QUE L'ON OUVRE, AUSSI BIEN POUR LES PARENTHÈSES QUE LES
+;; CROCHETS OU LES ACCOLADES.
+;;################################################################################
+
+(require 'paren)
+(show-paren-mode 1)
+(setq-default hilight-paren-expression t)
+
+
+;;################################################################################
+;; FERME AUTOMATIQUEMENT PARENTHÈSES, CROCHETS, GUILLEMETS
+;; AU COURS DE LA FRAPPE
+;;################################################################################
+
+(defun insert-parentheses () "insert parentheses and go between them"
+  (interactive)
+(insert "()")
+(backward-char 1))
+(defun insert-brackets () "insert brackets and go between them" (interactive)
+(insert "[]")
+(backward-char 1))
+(defun insert-braces () "insert curly braces and go between them" (interactive)
+(insert "{}")
+(backward-char 1))
+(defun insert-quotes () "insert quotes and go between them" (interactive)
+(insert "\"\"")
+(backward-char 1))
+(defun insert-french () "insert brackets and go between them" (interactive)
+(insert "\\og  \\fg")
+(backward-char 4))
+(global-set-key "(" 'insert-parentheses) ;;inserts "()"
+(global-set-key "[" 'insert-brackets)
+(global-set-key "{" 'insert-braces)
+(global-set-key "\"" 'insert-quotes)
+(global-set-key "|" 'insert-french)
+
+
+
+;;################################################################################
+;;                  SUPPRIME TOUS LES ESPACES EN FIN DE LIGNE
+;;################################################################################
+
+
+
+
+;(autoload 'nuke-trailing-whitespace "whitespace" nil t)
+
+
+;; TEX ;;
+;; mode PDF par défault :
+;(setq TeX-PDF-mode t)
+
+;;Visualiseurs
+
+;(setq TeX-output-view-style (quote (
+ ;     ("^pdf$" "." "kpdf %o")
+  ;    ("^ps$" "." "gv %o")
+    ;  ("^dvi$" "." "xdvi %o")
+   ;   )))
+
+;; analyse automatique des fichiers tex (parsing) :
+(setq TeX-parse-self t)
+(setq TeX-auto-save t)
+
+(add-hook 'LaTeX-mode-hook 'turn-on-flyspell)
+
+;; Codage des caractères
+
+
+;(set-face-font 'default '
+;"*courier-medium-r-normal--14-140-*-iso8859-15")
+
+;; Complétion automatique
+
+(abbrev-mode t) ; completion automatique
+(global-set-key (quote [S-tab]) (quote dabbrev-expand))
+
+
+
+;; Menus etc...
+(tool-bar-mode 1)
+(scroll-bar-mode 1)
+(menu-bar-mode 1)
+
+;; Taille et position par defaut de la fenetre
+(if window-system
+(setq initial-frame-alist '((top . 100)(left . 200)(width . 100)(height . 45)))) 
+(add-to-list 'default-frame-alist '(width  . 100))
+(add-to-list 'default-frame-alist '(height . 45))
+(add-to-list 'default-frame-alist '(top . 120))
+(add-to-list 'default-frame-alist '(left . 220))
+
+;;;;shell bash
+;;(setq explicit-shell-file-name "bash")
+
+;; Application d'un thème color-theme
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+;(load-theme 'mccarthy t)
+
+; Laisser le curseur en place lors d'un défilement par pages.
+; Par défaut, Emacs place le curseur en début ou fin d'écran
+; selon le sens du défilement.
+(setq scroll-preserve-screen-position t)
+
+
+; Supprimer les fichiers de sauvegarde en quittant.
+; (vous savez, ces fameux fichiers dont le nom se termine par « ~ »)
+(setq make-backup-files nil)
+
+
+;; Syntaxe highlighting pour tout
+(require 'font-lock)
+(setq initial-major-mode
+      (lambda ()
+    (text-mode)
+    (font-lock-mode)))
+(setq font-lock-mode-maximum-decoration t
+      font-lock-use-default-fonts t
+      font-lock-use-default-colors t)
+
+;; on change le nom de la fenetre par le nom du fichier edité 
+ (setq frame-title-format '(buffer-file-name "Emacs: %b (%f)" "Emacs: %b"))
+
+
+;;################################################################################
+;; TABBAR
+;; 
+;;################################################################################
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;chargement de tabbar
+
+(load "tabbar")
+(load "config_tabbar")
+;(eval-after-load "tabbar"
+ ;     (tabbar-mode))
+
+(tabbar-mode 1)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Key-binding pour flyspell
+
+(eval-after-load "flyspell"
+    '(progn
+       (define-key flyspell-mouse-map [down-mouse-3] #'flyspell-correct-word)
+       (define-key flyspell-mouse-map [mouse-3] #'undefined)))
+ ;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;(add-hook 'LaTeX-mode-hook 'linum-mode)
+(add-hook 'LaTeX-mode-hook (lambda () (linum-mode 1)))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Redéfinition de linum pour numéroter les lignes
+(setq linum-format "%4d")
+
+;; ;ess-mode configuration
+ (setq ess-ask-for-ess-directory nil) 
+ (setq inferior-R-program-name "/usr/bin/R") 
+ (setq ess-local-process-name "R") 
+ (setq ansi-color-for-comint-mode 'filter) 
+ (setq comint-scroll-to-bottom-on-input t) 
+ (setq comint-scroll-to-bottom-on-output t) 
+ (setq comint-move-point-for-output t)
+(setq ess-eval-visibly-p nil)
+
+
+;;;; alt + fleche pour se déplacer d'un mot à l'autre
+;(global-set-key (kbd "\Option-<left>") 'backward-word)
+;(global-set-key (kbd "\Option-<right>") 'forward-word)

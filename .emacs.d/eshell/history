@@ -1,0 +1,16 @@
+make cleanAll
+make complet
+make cleanAll
+make complet
+make cleanALL
+ls
+ls -lah
+env
+echo $PATH
+make complet
+make complet
+make cleanAll
+make complet
+make complet
+make complet
+make complet
