@@ -1,0 +1,13 @@
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[user]
+	name = obenchekroun
+	email = othmane@me.com
+[core]
+	excludesfile = /Users/bo/.gitexcludes
+[push]
+	default = simple
+[credential]
+	helper = osxkeychain
