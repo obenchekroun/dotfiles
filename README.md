@@ -48,7 +48,7 @@ These files update the path and add /usr/local/bin/bash (bash version from Homeb
 - Those files are contained in the folder configUnix.
 *To install them, run :*
 
-	$ ./bootstrap.sh
+		$ ./bootstrap.sh
 
 **This script will copy the .files to ~**
 
