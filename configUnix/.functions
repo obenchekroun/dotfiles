@@ -252,8 +252,8 @@ function notifyError () { command="$@"; terminal-notifier -title "Terminal ERROR
 # Usage:
 # if command returns 0 on success and non 0 on error:
 
-function wn () { ($@ && notifyDone $@) || notifyError $@; }
+function wn () { ($@ && notifyDone $@) || notifyError $@; tput bel;}
 
 # else
 
-function n () { $@; notifyDone $@;}
+function n () { $@; notifyDone $@;tput bel;}
