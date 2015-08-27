@@ -68,3 +68,15 @@ Git config files to be copied :
 
 	~/
 
+#### The scripts used are using the following tools. Make sure to install them beforehand
+
+*NB : scripts are using terminal-notifier to notify the completion of pushing.
+See https://github.com/julienXX/terminal-notifier and install by using :*
+```bash
+	$ brew install terminal-notifier
+```
+
+*NB : The conversion from .md to .pdf needs pandoc, which depends on a Latex distribution. To install pandoc :*
+```bash
+	$ brew install pandoc
+```
