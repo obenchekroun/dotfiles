@@ -6,7 +6,7 @@
  '(ansi-color-names-vector
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#ad7fa8" "#8cc4ff" "#eeeeec"])
  '(aquamacs-additional-fontsets nil t)
- '(aquamacs-customization-version-id 305 t)
+ '(aquamacs-customization-version-id 307 t)
  '(aquamacs-tool-bar-user-customization nil t)
  '(custom-safe-themes
    (quote
@@ -43,6 +43,7 @@
  '(ns-function-modifier (quote meta))
  '(ns-tool-bar-display-mode (quote both) t)
  '(ns-tool-bar-size-mode (quote regular) t)
+ '(one-buffer-one-frame-mode t nil (aquamacs-frame-setup))
  '(tabbar-mode 1 nil (tabbar))
  '(text-mode-hook nil)
  '(visual-line-mode nil t))

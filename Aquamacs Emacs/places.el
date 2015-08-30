@@ -1,10 +1,12 @@
 ;;; -*- coding: utf-8 -*-
-(("/Users/bo/Library/Preferences/Aquamacs Emacs/Packages/elpa/auctex-11.88.8/tests/tex/" . 49)
- ("/Users/bo/Library/Preferences/Aquamacs Emacs/Packages/elpa/auctex-11.88.8/auctex-autoloads.el" . 10317)
- ("/Users/bo/Desktop/NodeTutorial/"
+(("/Users/bo/Desktop/NodeTutorial/"
   (dired-filename . "/Users/bo/Desktop/NodeTutorial/package.json"))
  ("/Users/bo/Desktop/NodeTutorial/package.json" . 160)
- ("/Users/bo/Library/Preferences/Aquamacs Emacs/Preferences.el" . 1805)
+ ("/Users/bo/Library/Preferences/Aquamacs Emacs/Preferences.el" . 7541)
+ ("/Users/bo/Documents/Etudes/ENSAM 3A/Robust:Reliability-based Design Optimisation/Recherche biblio/"
+  (dired-filename . "/Users/bo/Documents/Etudes/ENSAM 3A/Robust:Reliability-based Design Optimisation/Recherche biblio/JEL-Article.tex"))
+ ("/Users/bo/Library/Preferences/Aquamacs Emacs/Packages/elpa/auctex-11.88.8/tests/tex/" . 49)
+ ("/Users/bo/Library/Preferences/Aquamacs Emacs/Packages/elpa/auctex-11.88.8/auctex-autoloads.el" . 10317)
  ("/Users/bo/Desktop/emacs.d/tabbar.el" . 71406)
  ("/Users/bo/Library/Preferences/Aquamacs Emacs/emacs.d/config_tabbar_aquamacs.el" . 4431)
  ("/Users/bo/Library/Preferences/Aquamacs Emacs/emacs.d/config_tabbar.el" . 2805)
@@ -46,8 +48,6 @@
  ("/Users/bo/Desktop/obenchekroun.github.io/README.md" . 2315)
  ("/Users/bo/Desktop/obenchekroun.github.io/gpush.sh" . 14)
  ("/Users/bo/Desktop/obenchekroun.github.io/update.sh" . 12)
- ("/Users/bo/Documents/Etudes/ENSAM 3A/Robust:Reliability-based Design Optimisation/Recherche biblio/"
-  (dired-filename . "/Users/bo/Documents/Etudes/ENSAM 3A/Robust:Reliability-based Design Optimisation/Recherche biblio/Makefile"))
  ("/Users/bo/Documents/Etudes/ENSAM 3A/Robust:Reliability-based Design Optimisation/Recherche biblio/Makefile" . 1159)
  ("/Users/bo/Desktop/SimpleMCChat/gpush.sh" . 261)
  ("/Users/bo/Desktop/finished.rb" . 879)
