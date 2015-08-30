@@ -129,6 +129,7 @@
 ;; Application d'un thème color-theme
 (add-to-list 'custom-theme-load-path "~/Library/Preferences/Aquamacs Emacs/emacs.d/themes/")
 ;(load-theme 'mccarthy t)
+;(load-theme 'spacegray t)
 
 ;; Syntaxe highlighting pour tout
 (require 'font-lock)
