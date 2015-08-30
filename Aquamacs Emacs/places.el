@@ -1,7 +1,25 @@
 ;;; -*- coding: utf-8 -*-
-(("/Users/bo/Library/Preferences/Aquamacs Emacs/Preferences.el" . 6360)
+(("/Users/bo/Desktop/emacs.d/tabbar.el" . 71406)
+ ("/Users/bo/Library/Preferences/Aquamacs Emacs/emacs.d/config_tabbar_aquamacs.el" . 4431)
+ ("/Users/bo/Library/Preferences/Aquamacs Emacs/emacs.d/config_tabbar.el" . 2805)
+ ("/Users/bo/Library/Preferences/Aquamacs Emacs/Preferences.el" . 5670)
+ ("/Users/bo/Desktop/NodeTutorial/package.json" . 160)
+ ("/Users/bo/Desktop/NodeTutorial/collectionDriver.js" . 1679)
  ("/Users/bo/Desktop/NodeTutorial/"
-  (dired-filename . "/Users/bo/Desktop/NodeTutorial/index.js"))
+  (dired-filename . "/Users/bo/Desktop/NodeTutorial/collectionDriver.js"))
+ ("/Users/bo/Desktop/emacs~" . 1887)
+ ("/Users/bo/Documents/Etudes/ENSAM 3A/Robust:Reliability-based Design Optimisation/Recherche biblio/Section1.tex" . 3028)
+ ("/Users/bo/Desktop/emacs.d/themes/zenburn-theme.el" . 32037)
+ ("/Users/bo/Downloads/node_tutorial_sample_app_complete/server/"
+  (dired-filename . "/Users/bo/Downloads/node_tutorial_sample_app_complete/server/index.js"))
+ ("/Users/bo/Downloads/node_tutorial_sample_app_complete/server/index.js" . 1290)
+ ("/Users/bo/Desktop/NodeTutorial/index.js" . 3158)
+ ("/Users/bo/Downloads/mongodb_sample_project1/"
+  (dired-filename . "/Users/bo/Downloads/mongodb_sample_project1/package.json"))
+ ("/Users/bo/Downloads/mongodb_sample_project1/package.json" . 156)
+ ("/Users/bo/Desktop/NodeTutorial/views/data.jade" . 281)
+ ("/Users/bo/Desktop/NodeTutorial/views/404.jade" . 56)
+ ("/Users/bo/Desktop/NodeTutorial/public/hello.html" . 39)
  ("/Users/bo/.emacs.d/tabbar.el" . 1676)
  ("/Users/bo/.emacs~" . 11333)
  ("/Users/bo/.emacs.d/config_tabbar_aquamacs.el" . 4432)

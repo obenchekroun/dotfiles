@@ -1,8 +1,45 @@
+;; This is the Aquamacs Preferences file.
+;; Add Emacs-Lisp code here that should be executed whenever
+;; you start Aquamacs Emacs. If errors occur, Aquamacs will stop
+;; evaluating this file and print errors in the *Messags* buffer.
+;; Use this file in place of ~/.emacs (which is loaded as well.)
+
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 
-(setq-default ispell-program-name "/usr/local/bin/aspell")
+;;(setq-default ispell-program-name "/usr/local/bin/aspell")
+
+;;(add-to-list 'load-path "~/Library/Preferences/Aquamacs Emacs/emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/")
+;;; Charge any additional tool
+
+;;(require 'sr-speedbar)
+
+;;################################################################################
+;;                                  UTF-8 for all
+;;################################################################################
+
+(set-terminal-coding-system 'utf-8)
+    (set-keyboard-coding-system 'utf-8)
+    (prefer-coding-system 'utf-8)
+(set-language-environment 'utf-8)
+(setq-default cursor-type 'bar) 
+
+;;################################################################################
+;;                                  Correction orthographique
+;;################################################################################
+;;; Not needed in Aquamacs
+
+;;(setq ispell-program-name "/usr/local/Cellar/ispell/3.3.02/bin/ispell")
+;; flyspell
+;;(setq-default ispell-program-name "/usr/local/bin/aspell")
+
+
+;;################################################################################
+;;                                            THUMBS-MODE
+;;################################################################################
+ (autoload 'thumbs "thumbs" "Preview images in a directory." t)
 
 ;;################################################################################
 ;;                                  ACTIVER LA COLORATION SYNTAXIQUE
@@ -91,7 +128,7 @@
 (add-to-list 'default-frame-alist '(left . 200))
 
 ;; Application d'un thème color-theme
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(add-to-list 'custom-theme-load-path "~/Library/Preferences/Aquamacs Emacs/emacs.d/themes/")
 ;(load-theme 'mccarthy t)
 
 ;; Syntaxe highlighting pour tout
@@ -110,17 +147,120 @@
 (setq linum-format "%4d")
 (global-linum-mode 1)
 
+(global-visual-line-mode 1) ;;                        POUR LA TRONCATURE EN FIN DE LIGNE PAR MOT
 ;;################################################################################
 ;; TABBAR
 ;; 
 ;;################################################################################
 
-;;chargement de tabbar
-;(add-to-list 'load-path "~/.emacs.d/")
-;(load "tabbar")
-(load "~/.emacs.d/config_tabbar_aquamacs")
+;;(load "tabbar")
+(load "config_tabbar_aquamacs")
+;(eval-after-load "tabbar"
+ ;     (tabbar-mode))
 
-;(tabbar-mode 1)
+(tabbar-mode 1)
 
-(message "* MESSAGE * Je charge bien .emacs")
 
+;; ####################################Comportement à la UI classique############
+
+
+ (dolist (func '(tabbar-mode tabbar-forward-tab tabbar-forward-group tabbar-backward-tab tabbar-backward-group))
+      (autoload func "tabbar" "Tabs at the top of buffers and easy control-tab navigation"))
+    (defmacro defun-prefix-alt (name on-no-prefix on-prefix &optional do-always)
+      `(defun ,name (arg)
+         (interactive "P")
+         ,do-always
+         (if (equal nil arg)
+             ,on-no-prefix
+           ,on-prefix)))
+    (defun-prefix-alt shk-tabbar-next (tabbar-forward-tab) (tabbar-forward-group) (tabbar-mode 1))
+    (defun-prefix-alt shk-tabbar-prev (tabbar-backward-tab) (tabbar-backward-group) (tabbar-mode 1))
+    (global-set-key [(control tab)] 'shk-tabbar-next)
+    (global-set-key [(control shift tab)] 'shk-tabbar-prev)(global-set-key [alt-left] 'tabbar-backward-tab)
+ 
+;;################################################################################
+;; Dired
+;; 
+;;################################################################################
+(add-hook 'dired-mode-hook 'my-dired-mode-hook)
+(defun my-dired-mode-hook ()
+  (local-set-key (kbd "<mouse-2>") 'dired-mouse-find-file))
+
+(defun dired-mouse-find-file (event)
+  "In Dired, visit the file or directory name you click on."
+  (interactive "e")
+  (require 'cl)
+  (flet ((find-file-other-window
+          (filename &optional wildcards)
+          (find-file filename wildcards)))
+    (dired-mouse-find-file-other-window event)))
+
+;;; Fix junk characters in shell-mode
+(autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
+
+;;################################################################################
+;; Face Customization of Aquamacs
+;; 
+;;################################################################################
+
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector
+   ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#ad7fa8" "#8cc4ff" "#eeeeec"])
+ '(aquamacs-additional-fontsets nil t)
+ '(aquamacs-customization-version-id 305 t)
+ '(aquamacs-tool-bar-user-customization nil t)
+ '(custom-safe-themes
+   (quote
+    ("6f3060ac8300275c990116794e1ba897b6a8af97c51a0cb226a98759752cddcf" "dc46381844ec8fcf9607a319aa6b442244d8c7a734a2625dac6a1f63e34bc4a6" "86e74c4c42677b593d1fab0a548606e7ef740433529b40232774fbb6bc22c048" "8d3fd54c8ccc81768ade3897e06646225d4ff7fe2c7ef1c8ee669ff85a3285b1" default)))
+ '(default-frame-alist
+    (quote
+     ((width . 120)
+      (left . 200)
+      (top . 100)
+      (height . 45)
+      (width . 110)
+      (cursor-type . box)
+      (vertical-scroll-bars . right)
+      (internal-border-width . 0)
+      (modeline . t)
+      (fringe)
+      (mouse-color . "black")
+      (cursor-color . "Red")
+      (background-mode . light)
+      (tool-bar-lines . 1)
+      (menu-bar-lines . 1)
+      (right-fringe . 9)
+      (left-fringe . 1)
+      (background-color . "White")
+      (foreground-color . "Black")
+      (font . "-*-Helvetica-normal-normal-normal-*-11-*-*-*-p-0-iso10646-1")
+      (fontsize . 0)
+      (font-backend mac-ct ns))))
+ '(display-time-mode t)
+ '(global-flyspell-mode t)
+ '(global-linum-mode t)
+ '(global-visual-line-mode 1)
+ '(ns-alternate-modifier (quote none))
+ '(ns-function-modifier (quote meta))
+ '(ns-tool-bar-display-mode (quote both) t)
+ '(ns-tool-bar-size-mode (quote regular) t)
+ '(tabbar-mode 1 nil (tabbar))
+ '(text-mode-hook nil)
+ '(visual-line-mode nil t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "White" :foreground "Black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 110 :width normal :foundry "nil" :family "Helvetica"))))
+ '(latex-mode-default ((t (:inherit text-mode-default :stipple nil :strike-through nil :underline nil :slant normal :weight normal :height 110 :width normal :family "Helvetica")))))
+
+(setq linum-format "%4d")
+(global-linum-mode 1)
+(global-visual-line-mode 1)

@@ -10,6 +10,36 @@
 
 ;;(setq-default ispell-program-name "/usr/local/bin/aspell")
 
+(add-to-list 'load-path "~/Library/Preferences/Aquamacs Emacs/emacs.d/")
+;;; Charge any additional tool
+
+;;(require 'sr-speedbar)
+
+;;################################################################################
+;;                                  UTF-8 for all
+;;################################################################################
+
+(set-terminal-coding-system 'utf-8)
+    (set-keyboard-coding-system 'utf-8)
+    (prefer-coding-system 'utf-8)
+(set-language-environment 'utf-8)
+(setq-default cursor-type 'bar) 
+
+;;################################################################################
+;;                                  Correction orthographique
+;;################################################################################
+;;; Not needed in Aquamacs
+
+;;(setq ispell-program-name "/usr/local/Cellar/ispell/3.3.02/bin/ispell")
+;; flyspell
+;;(setq-default ispell-program-name "/usr/local/bin/aspell")
+
+
+;;################################################################################
+;;                                            THUMBS-MODE
+;;################################################################################
+ (autoload 'thumbs "thumbs" "Preview images in a directory." t)
+
 ;;################################################################################
 ;;                                  ACTIVER LA COLORATION SYNTAXIQUE
 ;;################################################################################
@@ -97,7 +127,7 @@
 (add-to-list 'default-frame-alist '(left . 200))
 
 ;; Application d'un thème color-theme
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(add-to-list 'custom-theme-load-path "~/Library/Preferences/Aquamacs Emacs/emacs.d/themes/")
 ;(load-theme 'mccarthy t)
 
 ;; Syntaxe highlighting pour tout
@@ -116,17 +146,21 @@
 (setq linum-format "%4d")
 (global-linum-mode 1)
 
-(global-visual-line-mode 1)
+(global-visual-line-mode 1) ;;                        POUR LA TRONCATURE EN FIN DE LIGNE PAR MOT
 ;;################################################################################
 ;; TABBAR
 ;; 
 ;;################################################################################
 
+;;(load "tabbar")
+(load "config_tabbar_aquamacs")
+;(eval-after-load "tabbar"
+ ;     (tabbar-mode))
 
-;; ####################################Comportement à la UI classique
-;;######################################################################
-;;######################################################################
-;;######################################################################
+(tabbar-mode 1)
+
+
+;; ####################################Comportement à la UI classique############
 
 
  (dolist (func '(tabbar-mode tabbar-forward-tab tabbar-forward-group tabbar-backward-tab tabbar-backward-group))
