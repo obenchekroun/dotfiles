@@ -1,12 +1,14 @@
 ;;; -*- coding: utf-8 -*-
-(("/Users/bo/Desktop/emacs.d/tabbar.el" . 71406)
+(("/Users/bo/Library/Preferences/Aquamacs Emacs/Packages/elpa/auctex-11.88.8/tests/tex/" . 49)
+ ("/Users/bo/Library/Preferences/Aquamacs Emacs/Packages/elpa/auctex-11.88.8/auctex-autoloads.el" . 10317)
+ ("/Users/bo/Desktop/NodeTutorial/"
+  (dired-filename . "/Users/bo/Desktop/NodeTutorial/package.json"))
+ ("/Users/bo/Desktop/NodeTutorial/package.json" . 160)
+ ("/Users/bo/Library/Preferences/Aquamacs Emacs/Preferences.el" . 1805)
+ ("/Users/bo/Desktop/emacs.d/tabbar.el" . 71406)
  ("/Users/bo/Library/Preferences/Aquamacs Emacs/emacs.d/config_tabbar_aquamacs.el" . 4431)
  ("/Users/bo/Library/Preferences/Aquamacs Emacs/emacs.d/config_tabbar.el" . 2805)
- ("/Users/bo/Library/Preferences/Aquamacs Emacs/Preferences.el" . 5670)
- ("/Users/bo/Desktop/NodeTutorial/package.json" . 160)
  ("/Users/bo/Desktop/NodeTutorial/collectionDriver.js" . 1679)
- ("/Users/bo/Desktop/NodeTutorial/"
-  (dired-filename . "/Users/bo/Desktop/NodeTutorial/collectionDriver.js"))
  ("/Users/bo/Desktop/emacs~" . 1887)
  ("/Users/bo/Documents/Etudes/ENSAM 3A/Robust:Reliability-based Design Optimisation/Recherche biblio/Section1.tex" . 3028)
  ("/Users/bo/Desktop/emacs.d/themes/zenburn-theme.el" . 32037)
