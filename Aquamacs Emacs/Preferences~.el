@@ -207,8 +207,3 @@
 ;;; Fix junk characters in shell-mode
 (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
-
-;; ORG mode
-;(setq org-todo-keywords
- ;     '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
-
