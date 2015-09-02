@@ -1,7 +1,7 @@
 ;; Saved Frame Positions
 
 
-(if (fboundp (quote smart-frame-set-initial-frame-alist)) (smart-frame-set-initial-frame-alist (quote ((left . 494) (top . 121) (width . 120) (height . 45)))))
+(if (fboundp (quote smart-frame-set-initial-frame-alist)) (smart-frame-set-initial-frame-alist (quote ((left . 200) (top . 90) (width . 120) (height . 45)))))
 
 
 

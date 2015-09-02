@@ -1,5 +1,6 @@
 ;;; -*- coding: utf-8 -*-
-(("/Users/bo/Library/Preferences/Aquamacs Emacs/Preferences.el" . 14183)
+(("/Users/bo/Library/Preferences/Aquamacs Emacs/Preferences.el" . 11949)
+ ("/Users/bo/Desktop/dotfiles/README.md" . 1065)
  ("/Users/bo/Library/Preferences/Aquamacs Emacs/templates/" . 446)
  ("/Users/bo/Library/Preferences/Aquamacs Emacs/templates/c-template.c" . 48)
  ("/Users/bo/dzdz.org" . 92)
