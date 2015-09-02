@@ -1,5 +1,6 @@
 ;;; -*- coding: utf-8 -*-
-(("/Users/bo/notes.org" . 105)
+(("/Users/bo/Library/Preferences/Aquamacs Emacs/customizations.el" . 4493)
+ ("/Users/bo/notes.org" . 105)
  ("/Users/bo/Desktop/notes.org" . 115)
  ("/Users/bo/Desktop/notes.html" . 9180)
  ("/Users/bo/1.org" . 819)

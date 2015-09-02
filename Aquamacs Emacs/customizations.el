@@ -28,7 +28,7 @@
       (tool-bar-lines . 1)
       (menu-bar-lines . 1)
       (right-fringe . 0)
-      (left-fringe . 2)
+      (left-fringe . 1)
       (font . "-*-Helvetica-normal-normal-normal-*-11-*-*-*-p-0-iso10646-1")
       (fontsize . 0)
       (font-backend mac-ct ns))))
