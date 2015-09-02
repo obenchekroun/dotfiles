@@ -1,3 +1,5 @@
-#-*- mode: org -*-
+@BASEFILENAMELESSEXTENSION@ #-*- mode: org -*-
 #+STARTUP: showall
 #+TAGS: { @BOULOT(b) MOI(m) } ACHAT(a) EXAMS(e) DM(d)
+# Cmd-Z to clear the file from default content
+

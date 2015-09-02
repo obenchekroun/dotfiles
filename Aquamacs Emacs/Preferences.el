@@ -364,14 +364,19 @@
 
 ;;################################################################################
 ;; Use templates for files  - Adding templates to newly created files
-;; 
+;; Automatically done by default content
+;; Or manually done in this file
 ;;################################################################################
-(auto-insert-mode)  ; Enable the feature globally
-;;; Define what should get auto-inserted
-(setq auto-insert-directory "~/Library/Preferences/Aquamacs Emacs/templates/")
-(setq auto-insert-query nil)
-(define-auto-insert "\.sh" "bash-template.sh")
-(define-auto-insert "\.org" "org-template.org")
-(define-auto-insert "\.tex" "tex-template.tex")
-(define-auto-insert "\.c" "c-template.tex")
+(require 'defaultcontent)
+; Note that you have to modify emacs.d/defaultcontent.el to add new file backbone
+
+;;; Manually
+;; (auto-insert-mode)  ; Enable the feature globally
+;; ;;; Define what should get auto-inserted
+;; (setq auto-insert-directory "~/Library/Preferences/Aquamacs Emacs/templates/")
+;; (setq auto-insert-query nil)
+;; (define-auto-insert "\.sh" "bash-template.sh")
+;; (define-auto-insert "\.org" "org-template.org")
+;; (define-auto-insert "\.tex" "tex-template.tex")
+;; (define-auto-insert "\.c" "c-template.tex")
 

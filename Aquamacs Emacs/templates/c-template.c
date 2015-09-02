@@ -1,7 +1,10 @@
 //
-// main.c
-//  Created by Othmane Benchekroun
+//  @BASEFILENAME@
+//  Created by @AUTHOR@
+//  @DATE@
 //  Copyright (c) 2015 BO. All rights reserved.
+//
+//  Cmd-Z to clear the file from default content
 //
 
 #include <stdio.h>
