@@ -1,0 +1,44 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Wed Sep  2 13:19:50 2015
+;; Desktop file format version 206
+;; Emacs version 24.4.51.2
+(setq revive:frame-configuration-to-restore
+  '(progn 
+     (revive:restore-frame '((tool-bar-position . top) (explicit-name) (icon-name) (bottom-divider-width . 0) (right-divider-width . 0) (top . 121) (left . 494) (unsplittable) (width . 120) (height . 45) (modeline . t) (fringe) (mouse-color . "black") (environment) (visibility . t) (cursor-color . "orange") (background-mode . dark) (horizontal-scroll-bars . t) (fullscreen) (alpha) (scroll-bar-width . 15) (cursor-type . box) (auto-lower) (auto-raise) (icon-type) (title) (buffer-predicate) (tool-bar-lines . 1) (menu-bar-lines . 1) (right-fringe . 0) (left-fringe . 5) (line-spacing) (background-color . "#303347") (foreground-color . "#e5e5e5") (vertical-scroll-bars . right) (internal-border-width . 0) (border-width . 0) (font . "-*-Helvetica-normal-normal-normal-*-11-*-*-*-p-0-iso10646-1") (fontsize . 0)) '(120 45 ((0 0 124 44)) (("~/Library/Preferences/Aquamacs Emacs/Preferences.el" "Preferences.el" 14183 12842 ((tab "*scratch*" "/Users/bo/Library/Application Support/Aquamacs Emacs/scratch buffer") (tab "Preferences.el" "/Users/bo/Library/Preferences/Aquamacs Emacs/Preferences.el"))))))))
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (21990 56150 457303 0) (desktop . "206") "bo@MacBook-Pro-de-Othmane.local" nil nil ((((font-backend mac-ct ns) (fontsize . 0) (font . "-*-Helvetica-normal-normal-normal-*-11-*-*-*-p-0-iso10646-1") (border-width . 0) (internal-border-width . 0) (vertical-scroll-bars . right) (foreground-color . "#e5e5e5") (background-color . "#303347") (line-spacing) (left-fringe . 5) (right-fringe . 0) (menu-bar-lines . 1) (tool-bar-lines . 1) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 15) (alpha) (fullscreen) (horizontal-scroll-bars . t) (display-type . color) (background-mode . dark) (cursor-color . "orange") (visibility . t) (environment) (mouse-color . "black") (fringe) (modeline . t) (frameset--id . "F3AB-4224-DD3A-C238") (frameset--mini t . t) (height . 45) (width . 120) (minibuffer . t) (unsplittable) (left . 494) (top . 121) (right-divider-width . 0) (bottom-divider-width . 0) (icon-name) (display . "MacBook-Pro-de-Othmane.local") (explicit-name) (tool-bar-position . top)) ((min-height . 4) (min-width . 10) (min-height-ignore . 4) (min-width-ignore . 6) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 52) (min-pixel-width . 50) (min-pixel-height-ignore . 49) (min-pixel-width-ignore . 30) (min-pixel-height-safe . 13) (min-pixel-width-safe . 10)) leaf (pixel-width . 620) (pixel-height . 572) (total-width . 124) (total-height . 44) (normal-height . 1.0) (normal-width . 1.0) (buffer "Preferences.el" (selected . t) (hscroll . 0) (fringes 5 0 nil) (margins 4) (scroll-bars 15 3 t nil) (vscroll . 0) (dedicated) (point . 14183) (start . 12842))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("backup" "flet" "subatomic" "yasnippet" "fringe" "comment" "comme" "comment" "font lo" "themes" "theme" "flat" "st" "stekene" "suba" "dracula"))
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/dz.tex" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/Library/Preferences/Aquamacs Emacs/templates/c-template.c" "~/dzdz.org" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/Library/Preferences/Aquamacs Emacs/templates/dzzd.c" "~/Library/Preferences/Aquamacs Emacs/templates/org-template.org" "~/Desktop/Courses HEC.org" "~/Library/Preferences/Aquamacs Emacs/templates/org-template.org" "~/Library/Preferences/Aquamacs Emacs/templates/org-templateorg" "~/Library/Preferences/Aquamacs Emacs/templates/tex-template.tex" "~/Library/Preferences/Aquamacs Emacs/templates/dz.tex" "~/Library/Preferences/Aquamacs Emacs/templates/tex-template.tex" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/fdzdz.sh" "~/Library/Preferences/Aquamacs Emacs/templates/bash-template.sh" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/dz.sh" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/Desktop/Courses HEC.org" "~/Documents/Etudes/ENSAM 3A/Robust:Reliability-based Design Optimisation/Recherche biblio/Section1.tex" "~/Desktop/Courses HEC.org" "~/fe.tex" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/Documents/Etudes/ENSAM 2A/Rapport de stage/notice.tex" "~/sza.tex" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/sza.tex" "~/de.tex" "~/sza.tex" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/sza.tex" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/dza.tex" "~/dz.c" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/dz.tex" "~/dz.c" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/Desktop/Courses HEC.org" "~/dza.c" "~/dz.c" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/dz.c" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/Library/Preferences/Aquamacs Emacs/customizations.el" "~/Desktop/NodeTutorial/collectionDriver.js" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/Desktop/NodeTutorial/collectionDriver.js" "~/Desktop/NodeTutorial/package.json" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/Library/Preferences/Aquamacs Emacs/Packages/elpa/yasnippet-20150811.1222/yasnippet-autoloads.el" "~/Desktop/Courses HEC.org" "~/Library/Preferences/Aquamacs Emacs/customizations.el" "~/Desktop/Courses HEC.org" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/Documents/Etudes/ENSAM 3A/Robust:Reliability-based Design Optimisation/Recherche biblio/Plan.txt" "~/Documents/Etudes/ENSAM 3A/Robust:Reliability-based Design Optimisation/Recherche biblio/Section1.tex" "/Users/bo/Documents/Etudes/ENSAM 3A/Robust:Reliability-based Design Optimisation/Recherche biblio" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/Desktop/NodeTutorial/package.json" "~/Desktop/NodeTutorial/" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/Library/Preferences/Aquamacs Emacs/customizations.el" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/Documents/Etudes/ENSAM 3A/Mquantitatives/projet/rapportR/p1.tex" "~/Documents/Etudes/ENSAM 3A/Mquantitatives/projet/rapportR/rapportR.tex" "~/Desktop/Courses HEC.ics" "~/Desktop/Courses HEC.org" "~/Library/Preferences/Aquamacs Emacs/customizations.el" "~/notes.org" "~/Desktop/notes.org" "~/Desktop/notes.html" "~/Desktop/notes.org" "~/Desktop/notes" "~/1.pdf" "~/" "~/1.org" "~/1.tex" "~/1.org" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/1.org" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/1.org" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/Code/Programmation/C/Algorithme CompteEstBon/compte.c" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/Documents/Etudes/ENSAM 3A/Robust:Reliability-based Design Optimisation/Recherche biblio/Section1.tex" "~/Documents/Etudes/ENSAM 3A/Robust:Reliability-based Design Optimisation/Recherche biblio/JEL-Article.tex" "~/Documents/Etudes/ENSAM 3A/Robust:Reliability-based Design Optimisation/Recherche biblio/Makefile" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/Library/Preferences/Aquamacs Emacs/customizations.el" "~/Documents/Etudes/ENSAM 3A/Robust:Reliability-based Design Optimisation/Recherche biblio/JEL-Article.tex" "~/Documents/Etudes/ENSAM 3A/Robust:Reliability-based Design Optimisation/Recherche biblio/Section1.tex" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/Documents/Etudes/ENSAM 3A/Robust:Reliability-based Design Optimisation/Recherche biblio/Section1.tex" "~/Library/Preferences/Aquamacs Emacs/Preferences.el" "~/Library/Preferences/Aquamacs Emacs/customizations.el" "~/Library/Preferences/Aquamacs Emacs/Packages/elpa/subatomic-theme-20150704.809/subatomic-theme.el" "~/Library/Preferences/Aquamacs Emacs/customizations.el"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/Users/bo/Library/Preferences/Aquamacs Emacs/Preferences.el"
+  "Preferences.el"
+  'emacs-lisp-mode
+  '(visual-line-mode flyspell-mode linum-mode yas-minor-mode)
+  14183
+  '(13557 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/Users/bo/Library/Application Support/Aquamacs Emacs/scratch buffer"
+  "*scratch*"
+  'text-mode
+  '(visual-line-mode flyspell-mode linum-mode yas-minor-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8) (truncate-lines)))
+

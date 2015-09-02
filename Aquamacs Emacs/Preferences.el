@@ -70,6 +70,12 @@
 (setq display-time-24hr-format t)
 
 ;;################################################################################
+;;                        UTILISATION DE TAB POUR L'INDENTATION UNIQUEMENT
+;; conflits : yasnippet
+;;################################################################################
+(setq tab-always-indent t)
+
+;;################################################################################
 ;; FERME AUTOMATIQUEMENT PARENTHÈSES, CROCHETS, GUILLEMETS
 ;; AU COURS DE LA FRAPPE
 ;;################################################################################
@@ -204,11 +210,168 @@
           (find-file filename wildcards)))
     (dired-mouse-find-file-other-window event)))
 
+;;################################################################################
+;; Shell
+;; 
+;;################################################################################
+
 ;;; Fix junk characters in shell-mode
 (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 
+;;################################################################################
+;; Org Mode
+;; 
+;;################################################################################
 ;; ORG mode
 ;(setq org-todo-keywords
- ;     '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
+					;     '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
+
+;;################################################################################
+;; iBuffer
+;; 
+;;################################################################################
+(require 'ibuffer)
+(global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
+(autoload 'ibuffer "ibuffer" "List buffers." t)
+
+(setq ibuffer-saved-filter-groups
+        (quote (("default"
+                 ("Org" ;; all org-related buffers
+                  (mode . org-mode))
+                 ;; ("equfitter"
+                 ;;  (filename . "equationfitter/"))
+                 ("Programming C++" ;; prog stuff not already in MyProjectX
+                  (or
+                   (mode . c-mode)
+                   (mode . c++-mode)
+                   ))
+
+                 ("Source Code" ;; non C++ related stuff.
+                  (or
+                   (mode . python-mode)
+                   (mode . emacs-lisp-mode)
+                   (mode . shell-script-mode)
+                   (mode . f90-mode)
+                   (mode . scheme-mode)
+                   ;; etc
+                   ))
+
+                 ("LaTeX"
+                  (or
+                   (mode . tex-mode)
+                   (mode . latex-mode)
+                   (name . ".tex")
+                   (name . ".bib")
+                   ))
+
+                 ("Text" (name . ".txt"))
+
+                 ("Mail"
+                  (or  ;; mail-related buffers
+                   (mode . message-mode)
+                   (mode . mail-mode)
+                   (mode . mime-mode)
+;;                   (mode . MIME-mode)
+
+                   ;; etc.; all your mail related modes
+                   ))
+
+                 ("Web" (or (mode . html-mode)
+                            (mode . css-mode)))
+
+                 ("ERC"   (mode . erc-mode))
+
+                 ;; ("Subversion" (name . "\*svn"))
+                 ;; ("Magit" (name . "\*magit"))
+
+                 ("Emacs-created"
+                  (or
+                   (name . "^\\*")))
+                 ))))
+
+  (add-hook 'ibuffer-mode-hook
+            (lambda ()
+              ;;(ibuffer-auto-mode 1)   ;auto update the buffer-list
+              (ibuffer-switch-to-saved-filter-groups "default")))
+
+  ;;Don't show (filter) groups that are empty.
+  (setq ibuffer-show-empty-filter-groups nil)
+  ;;(autoload 'ibuffer "ibuffer" "List buffers." t)
+
+  ;; keep from warning, twice, about deleting buffers.
+  ;; only warn about deleting modified buffers.
+  (setq ibuffer-expert t)
+
+(add-hook 'ibuffer-mode-hook (lambda () (ibuffer-auto-mode 1)))
+
+(defun xah-ibuffer-keys ()
+  "Modify keymaps used by `ibuffer'."
+  (local-set-key (kbd "<down-mouse-1>") 'ibuffer-mouse-visit-buffer)
+  )
+
+(add-hook 'ibuffer-hook 'xah-ibuffer-keys)
+;;; Make iBuffer go away when selecting a file
+;;---------------------------------------------
+(define-key ibuffer-mode-map [remap ibuffer-visit-buffer]
+  '(lambda () (interactive)
+     (ibuffer-visit-buffer t)))
+;;---------------------------------------------
+
+;; Use human readable Size column instead of original one
+
+;; Use human readable Size column instead of original one
+(define-ibuffer-column size-h
+  (:name "Size" :inline t)
+  (cond
+   ((> (buffer-size) 1000000) (format "%7.3fM" (/ (buffer-size) 1000000.0)))
+   ((> (buffer-size) 1000) (format "%7.3fk" (/ (buffer-size) 1000.0)))
+   (t (format "%8d" (buffer-size)))))
+
+;; (define-ibuffer-column size-h
+;;   (:name "Size" :inline t)
+;;   (cond
+;;    ((> (buffer-size) 1000000) (format "%7.1fM" (/ (buffer-size) 1000000.0)))
+;;    ((> (buffer-size) 100000) (format "%7.0fk" (/ (buffer-size) 1000.0)))
+;;    ((> (buffer-size) 1000) (format "%7.1fk" (/ (buffer-size) 1000.0)))
+;;    (t (format "%8d" (buffer-size)))))
+
+;; Modify the default ibuffer-formats
+  (setq ibuffer-formats
+	'((mark modified read-only " "
+		(name 18 18 :left :elide)
+		" "
+		(size-h 9 -1 :right)
+		" "
+		(mode 16 16 :left :elide)
+		" "
+		filename-and-process)))
+;;################################################################################
+;; Yasnippet - Adding snippets (expanding pre defined text)
+;; 
+;;################################################################################
+ (add-to-list 'load-path
+               "~/Library/Preferences/Aquamacs Emacs/Packages/elpa/yasnippet-20150811.1222")
+ (require 'yasnippet)
+(yas-global-mode 1)
+
+(define-key yas-minor-mode-map (kbd "<tab>") nil)
+(define-key yas-minor-mode-map (kbd "TAB") nil)
+(define-key yas-minor-mode-map (kbd "<M-S-tab> ") 'yas-expand)
+;; (require 'yasnippet-bundle)
+;; (require 'yasnippet)
+;;(yas/initialize)
+
+;;################################################################################
+;; Use templates for files  - Adding templates to newly created files
+;; 
+;;################################################################################
+(auto-insert-mode)  ; Enable the feature globally
+;;; Define what should get auto-inserted
+(setq auto-insert-directory "~/Library/Preferences/Aquamacs Emacs/templates/")
+(setq auto-insert-query nil)
+(define-auto-insert "\.sh" "bash-template.sh")
+(define-auto-insert "\.org" "org-template.org")
+(define-auto-insert "\.tex" "tex-template.tex")
+(define-auto-insert "\.c" "c-template.tex")
 

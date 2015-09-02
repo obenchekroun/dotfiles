@@ -40,7 +40,7 @@
  '(ns-function-modifier (quote meta))
  '(ns-tool-bar-display-mode (quote both) t)
  '(ns-tool-bar-size-mode (quote regular) t)
- '(org-agenda-files (quote ("~/Desktop/notes.org" "~/1.org")))
+ '(org-agenda-files (quote ("~/Desktop/Courses HEC.org")))
  '(tabbar-mode 1 nil (tabbar))
  '(text-mode-hook nil)
  '(visual-line-mode nil t))
@@ -49,9 +49,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(Buffer-menu-mode-default ((t (:inherit tabulated-list-mode-default :height 110 :family "Monaco"))) t)
  '(calendar-mode-default ((t (:inherit autoface-default :height 110 :family "Monaco"))) t)
+ '(ibuffer-mode-default ((t (:inherit special-mode-default :height 100 :family "Monaco"))) t)
  '(latex-mode-default ((t (:inherit tex-mode-default :stipple nil :strike-through nil :underline nil :slant normal :weight normal :height 110 :width normal :family "Helvetica"))))
  '(linum ((t (:foreground "#696e92" :background "##484866" :box nil))))
+ '(org-agenda-mode-default ((t (:inherit autoface-default :height 110 :family "Helvetica"))) t)
+ '(org-mode-default ((t (:inherit outline-mode-default :stipple nil :strike-through nil :underline nil :slant normal :weight normal :height 110 :width normal :family "Helvetica"))))
  '(text-mode-default ((t (:inherit autoface-default :stipple nil :strike-through nil :underline nil :slant normal :weight normal :height 110 :width normal :family "Helvetica")))))
 
 

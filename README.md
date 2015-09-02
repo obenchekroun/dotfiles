@@ -45,6 +45,9 @@ These files update the path and add /usr/local/bin/bash (bash version from Homeb
 ### Aquamacs configuration
 
 	~/Library/Preferences/Aquamacs Emacs
+	~/.emacs.d
+
+*NB : rename  emacs.d.aquamacs into ~/.emacs.d*
 
 ### Shell configuration
 
