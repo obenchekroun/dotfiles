@@ -49,6 +49,8 @@ These files update the path and add /usr/local/bin/bash (bash version from Homeb
 
 *NB : rename  emacs.d.aquamacs into ~/.emacs.d*
 
+you may also change Aquamacs icon to *emacsV1.iconset.zip*
+
 ### Shell configuration
 
 - Those files are contained in the folder configUnix.
