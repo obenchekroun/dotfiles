@@ -73,6 +73,16 @@ Git config files to be copied :
 
 	~/
 
+### Fonts
+
+The folder *fonts* contains two fonts used by me.
+
+- Flama Font Family for LaTeX slides
+
+- DejaVu font used by Aquamacs
+
+**Be sure to install them before use**
+
 #### The scripts used are using the following tools. Make sure to install them beforehand
 
 *NB : scripts are using terminal-notifier to notify the completion of pushing.
