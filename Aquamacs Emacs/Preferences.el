@@ -133,11 +133,11 @@
 ;; Fenêtre
 ;;################################################################################
 ;; Taille et position par defaut de la fenetre
-(setq initial-frame-alist '((top . 90)(left . 200)(width . 120)(height . 45)))
-(add-to-list 'default-frame-alist '(width  . 120))
-(add-to-list 'default-frame-alist '(height . 45))
-(add-to-list 'default-frame-alist '(top . 100))
-(add-to-list 'default-frame-alist '(left . 200))
+;; (setq initial-frame-alist '((top . 90)(left . 200)(width . 120)(height . 45)))
+;; (add-to-list 'default-frame-alist '(width  . 120))
+;; (add-to-list 'default-frame-alist '(height . 45))
+;; (add-to-list 'default-frame-alist '(top . 100))
+;; (add-to-list 'default-frame-alist '(left . 200))
 
 ;; Application d'un thème color-theme
 ;(add-to-list 'custom-theme-load-path "~/Library/Preferences/Aquamacs Emacs/")
@@ -379,4 +379,15 @@
 ;; (define-auto-insert "\.org" "org-template.org")
 ;; (define-auto-insert "\.tex" "tex-template.tex")
 ;; (define-auto-insert "\.c" "c-template.tex")
+;;################################################################################
+;; ORG mode
+;; settings for the mobile org app
+;;################################################################################
+
+;; Set to the location of your Org files on your local system
+(setq org-directory "~/Documents/org")
+;; Set to the name of the file where new notes will be stored
+(setq org-mobile-inbox-for-pull "~/Documents/org/flagged.org")
+;; Set to <your Dropbox root directory>/MobileOrg.
+(setq org-mobile-directory "~/Dropbox/Applications/MobileOrg")
 

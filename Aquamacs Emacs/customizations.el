@@ -12,11 +12,10 @@
     ("0d8921c6408a88108c03352fe5a905518a38ee3ab05613c164c141b4b6fb2a76" "b6f42c69cf96795c75b1e79e5cd8ca62f9f9a0cb07bf11d1e0b49f97785358f1" default)))
  '(default-frame-alist
     (quote
-     ((width . 120)
-      (left . 200)
+     ((left . 200)
       (top . 100)
       (height . 45)
-      (width . 110)
+      (width . 120)
       (cursor-type . box)
       (vertical-scroll-bars . right)
       (internal-border-width . 0)
@@ -24,12 +23,14 @@
       (fringe)
       (mouse-color . "black")
       (cursor-color . "orange")
-      (background-mode . light)
+      (background-mode . dark)
       (tool-bar-lines . 1)
       (menu-bar-lines . 1)
       (right-fringe . 0)
-      (left-fringe . 1)
-      (font . "-*-Helvetica-normal-normal-normal-*-11-*-*-*-p-0-iso10646-1")
+      (left-fringe . 6)
+      (background-color . "#303347")
+      (foreground-color . "#e5e5e5")
+      (font . "-*-DejaVu Sans Mono-normal-normal-normal-*-10-*-*-*-m-0-iso10646-1")
       (fontsize . 0)
       (font-backend mac-ct ns))))
  '(display-time-mode t)
@@ -40,7 +41,7 @@
  '(ns-function-modifier (quote meta))
  '(ns-tool-bar-display-mode (quote both) t)
  '(ns-tool-bar-size-mode (quote regular) t)
- '(org-agenda-files (quote ("~/Desktop/Courses HEC.org")))
+ '(org-agenda-files (quote ("~/Documents/org/Courses HEC.org")))
  '(tabbar-mode 1 nil (tabbar))
  '(text-mode-hook nil)
  '(visual-line-mode nil t))
@@ -49,14 +50,14 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(Buffer-menu-mode-default ((t (:inherit tabulated-list-mode-default :height 110 :family "Monaco"))) t)
- '(calendar-mode-default ((t (:inherit autoface-default :height 110 :family "Monaco"))) t)
- '(ibuffer-mode-default ((t (:inherit special-mode-default :height 100 :family "Monaco"))) t)
- '(latex-mode-default ((t (:inherit tex-mode-default :stipple nil :strike-through nil :underline nil :slant normal :weight normal :height 110 :width normal :family "Helvetica"))))
+ '(Buffer-menu-mode-default ((t (:inherit tabulated-list-mode-default :height 100 :family "DejaVu Sans Mono"))) t)
+ '(calendar-mode-default ((t (:inherit autoface-default :height 100 :family "DejaVu Sans Mono"))) t)
+ '(ibuffer-mode-default ((t (:inherit special-mode-default :height 100 :family "DejaVu Sans Mono"))) t)
+ '(latex-mode-default ((t (:inherit tex-mode-default :stipple nil :strike-through nil :underline nil :slant normal :weight normal :height 100 :width normal :family "DejaVu Sans Mono"))))
  '(linum ((t (:foreground "#696e92" :background "##484866" :box nil))))
- '(org-agenda-mode-default ((t (:inherit autoface-default :height 110 :family "Helvetica"))) t)
- '(org-mode-default ((t (:inherit outline-mode-default :stipple nil :strike-through nil :underline nil :slant normal :weight normal :height 110 :width normal :family "Helvetica"))))
- '(text-mode-default ((t (:inherit autoface-default :stipple nil :strike-through nil :underline nil :slant normal :weight normal :height 110 :width normal :family "Helvetica")))))
+ '(org-agenda-mode-default ((t (:inherit autoface-default :height 100 :family "DejaVu Sans Mono"))) t)
+ '(org-mode-default ((t (:inherit outline-mode-default :stipple nil :strike-through nil :underline nil :slant normal :weight normal :height 100 :width normal :family "DejaVu Sans Mono"))))
+ '(text-mode-default ((t (:inherit autoface-default :stipple nil :strike-through nil :underline nil :slant normal :weight normal :height 100 :width normal :family "DejaVu Sans Mono")))))
 
 
 ;; Linum customization
