@@ -1,7 +1,7 @@
 ;;; -*- coding: utf-8 -*-
-(("/Users/bo/Library/Application Support/Aquamacs Emacs/scratch buffer" . 18)
- ("/Users/bo/Documents/org/Courses HEC.org" . 259)
- ("/Users/bo/Library/Preferences/Aquamacs Emacs/Preferences.el" . 5558)
+(("/Users/bo/Documents/org/Courses HEC.org" . 866)
+ ("/Users/bo/Library/Preferences/Aquamacs Emacs/Preferences.el" . 15735)
+ ("/Users/bo/Documents/Etudes/ENSAM 3A/Cahier des charges mémoire de recherche SDMR 2013-2014-2.docx" . 2275)
  ("/Users/bo/Desktop/dotfiles/README.md" . 903)
  ("/Users/bo/Documents/org/Courses HEC.ics" . 417)
  ("/Users/bo/Documents/org/flagged.org" . 299)

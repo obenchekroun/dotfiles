@@ -385,9 +385,27 @@
 ;;################################################################################
 
 ;; Set to the location of your Org files on your local system
+;(require 'org-mode)
 (setq org-directory "~/Documents/org")
 ;; Set to the name of the file where new notes will be stored
 (setq org-mobile-inbox-for-pull "~/Documents/org/flagged.org")
 ;; Set to <your Dropbox root directory>/MobileOrg.
 (setq org-mobile-directory "~/Dropbox/Applications/MobileOrg")
-
+;; Some potentially useful key bindings
+;; (add-hook 'org-mode-hook 
+;;           (lambda ()
+;;             (local-set-key "\M-n" 'outline-next-visible-heading)
+;;             (local-set-key "\M-p" 'outline-previous-visible-heading)
+;;             ;; table
+;;             (local-set-key "\C-\M-w" 'org-table-copy-region)
+;;             (local-set-key "\C-\M-y" 'org-table-paste-rectangle)
+;;             (local-set-key "\C-\M-l" 'org-table-sort-lines)
+;;             ;; display images
+;;             (local-set-key "\M-I" 'org-toggle-iimage-in-org)
+;;             ;; fix tab
+;;             (local-set-key "\C-y" 'yank)))
+;; Set C-c a to agenda
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+;; (global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+;; (global-set-key "\C-cb" 'org-iswitchb)
