@@ -4,6 +4,21 @@
 ##This git contains some dotfiles
 
 It's purpose is to help me reconfigure the Unix part of my system.
+
+### Disabling SIP (System Integrity Protection)
+By default, El Capitan forbid write permission to various system folders & files, even for administrator & root ! To deactivate that :
+
+- Reboot on recovery mode (cmd + R)
+
+- Execute the following :
+```bash
+$ csrutil disable"
+```
+
+- reboot
+
+###Tools
+
 I have the following tools installed :
 
 - Homebrew : http://brew.sh
@@ -30,19 +45,20 @@ http://iphonedevwiki.net/index.php/Theos/Getting_Started#On_Mac_OS_X_or_Linux
 
 Then, here is the description of the files :
 
-### Paths & shells files
+#### Paths & shells files
 
 	/etc/paths
 	/etc/shells
+	/etc/paths.d/*
 
 These files update the path and add /usr/local/bin/bash (bash version from Homebrew)
 
-### eMacs configuration
+#### eMacs configuration
 
 	~/.emacs
 	~/.emacs.d
 
-### Aquamacs configuration
+#### Aquamacs configuration
 
 	~/Library/Preferences/Aquamacs Emacs
 	~/.emacs.d
@@ -51,7 +67,7 @@ These files update the path and add /usr/local/bin/bash (bash version from Homeb
 
 you may also change Aquamacs icon to *emacsV1.iconset.zip*
 
-### Shell configuration
+#### Shell configuration
 
 - Those files are contained in the folder configUnix.
 *To install them, run :*
@@ -67,7 +83,7 @@ You might want to take a look to this script since it's excluding some files you
 
 **Look at the bootstrap.sh file given that it excludes some files from the installation, you might want to copy **
 
-### Git config file
+#### Git config file
 
 Git config files to be copied :
 
@@ -83,7 +99,7 @@ The folder *fonts* contains two fonts used by me.
 
 **Be sure to install them before use**
 
-#### The scripts used are using the following tools. Make sure to install them beforehand
+### The scripts used are using the following tools. Make sure to install them beforehand
 
 *NB : scripts are using terminal-notifier to notify the completion of pushing.
 See https://github.com/julienXX/terminal-notifier and install by using :*
@@ -94,4 +110,13 @@ See https://github.com/julienXX/terminal-notifier and install by using :*
 *NB : The conversion from .md to .pdf needs pandoc, which depends on a Latex distribution. To install pandoc :*
 ```bash
 	$ brew install pandoc
+```
+
+### MacTeX & SIP
+
+MacTeX creates an alias in **/usr/texbin**, but won't do it with SIP. Although, $PATH is updated to correctly link the TeX distribution, you might want to add manually this link. After deactivating SIP, execute :
+
+```bash
+$ sudo ln -s /Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin
+/usr/texbin
 ```
