@@ -12,7 +12,7 @@ By default, El Capitan forbid write permission to various system folders & files
 
 - Execute the following :
 ```bash
-$ csrutil disable"
+$ csrutil disable
 ```
 
 - reboot
