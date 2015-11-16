@@ -79,33 +79,34 @@
 ;; FERME AUTOMATIQUEMENT PARENTHÈSES, CROCHETS, GUILLEMETS
 ;; AU COURS DE LA FRAPPE
 ;;################################################################################
-
-(defun insert-parentheses () "insert parentheses and go between them"
-  (interactive)
-(insert "()")
-(backward-char 1))
-(defun insert-brackets () "insert brackets and go between them" (interactive)
-(insert "[]")
-(backward-char 1))
-(defun insert-braces () "insert curly braces and go between them" (interactive)
-(insert "{}")
-(backward-char 1))
-(defun insert-quotes () "insert quotes and go between them" (interactive)
-(insert "\"\"")
-(backward-char 1))
-(defun insert-french () "insert brackets and go between them" (interactive)
-(insert "\\og  \\fg")
-(backward-char 4))
-(global-set-key "(" 'insert-parentheses) ;;inserts "()"
-(global-set-key "[" 'insert-brackets)
-(global-set-key "{" 'insert-braces)
-(global-set-key "\"" 'insert-quotes)
-(global-set-key "|" 'insert-french)
+(electric-pair-mode 1)
+;; (defun insert-parentheses () "insert parentheses and go between them"
+;;   (interactive)
+;; (insert "()")
+;; (backward-char 1))
+;; (defun insert-brackets () "insert brackets and go between them" (interactive)
+;; (insert "[]")
+;; (backward-char 1))
+;; (defun insert-braces () "insert curly braces and go between them" (interactive)
+;; (insert "{}")
+;; (backward-char 1))
+;; (defun insert-quotes () "insert quotes and go between them" (interactive)
+;; (insert "\"\"")
+;; (backward-char 1))
+;; (defun insert-french () "insert brackets and go between them" (interactive)
+;; (insert "\\og  \\fg")
+;; (backward-char 4))
+;; (global-set-key "(" 'insert-parentheses) ;;inserts "()"
+;; (global-set-key "[" 'insert-brackets)
+;; (global-set-key "{" 'insert-braces)
+;; (global-set-key "\"" 'insert-quotes)
+;; (global-set-key "|" 'insert-french)
 
 ;;################################################################################
 ;; TEX mode
 ;;################################################################################
 (add-hook 'LaTeX-mode-hook 'turn-on-flyspell)
+;(add-hook 'LaTeX-mode-hook 'electric-pair-mode)
 
 (add-hook 'LaTeX-mode-hook (lambda () (linum-mode 1)))
 
@@ -358,9 +359,10 @@
 (define-key yas-minor-mode-map (kbd "<tab>") nil)
 (define-key yas-minor-mode-map (kbd "TAB") nil)
 (define-key yas-minor-mode-map (kbd "<M-S-tab> ") 'yas-expand)
-;; (require 'yasnippet-bundle)
+
+;; (require 'yasnippet-bundle)		
 ;; (require 'yasnippet)
-;;(yas/initialize)
+;; (yas/initialize)
 
 ;;################################################################################
 ;; Use templates for files  - Adding templates to newly created files
